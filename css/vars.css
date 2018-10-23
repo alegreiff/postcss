@@ -1,3 +1,6 @@
 $blue: blue;
 $column: 200px;
-@custom-media --small-viewport (max-width: 840px);
+@custom-media --mini (min-width: 0px) and (max-width: 400px);
+@custom-media --media (min-width: 401px) and (max-width: 800px);
+@custom-media --grande (min-width: 801px) and (max-width: 1200px);
+@custom-media --gigante (min-width: 1201px);

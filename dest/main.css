@@ -84,7 +84,7 @@ html {
     display: flex;
 }
 :root{
-    --foca: lime;
+    --foca: white;
     --foca2: rgba(144, 100, 182, 0.6);
 }
 body{
@@ -92,8 +92,8 @@ body{
 
 
     font-family: 'Lato', sans-serif;
-    background: lime;
-    background: lime;
+    background: white;
+    background: white;
     background: var(--foca);
     display: grid;
     grid-template-columns: 350px 1fr 1fr;
@@ -103,7 +103,7 @@ body{
     grid-template-rows: 150px 1fr 80px;
 
 }
-@media (max-width: 840px) {
+@media (min-width: 0px) and (max-width: 400px) {
     body {
         grid-template-columns: 1fr;
         grid-template-areas:    "header"
@@ -114,7 +114,7 @@ body{
     }
 }
 body {
-    height: 100vh;
+    height: 70vh;
     padding: 0;
     margin: 0;
 }
@@ -144,6 +144,7 @@ header{
     grid-area: header;
     background: rgba(150, 100, 200, 0.8);
 
+
 }
 aside{
     grid-area: aside;
@@ -156,81 +157,31 @@ aside{
 }
 footer{
     grid-area: footer;
-    background: lime;
+    border: 5px yellow solid;
     color: rgba(180, 100, 20, 0.8);
+}
+@media (min-width: 0px) and (max-width: 400px) {
+    footer {
+        background: red;
+    }
+}
+@media (min-width: 401px) and (max-width: 800px) {
+    footer {
+        background: yellow;
+    }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+    footer {
+        background: lime;
+    }
+}
+@media (min-width: 1201px) {
+    footer {
+        background: peru;
+    }
 }
 p:nth-last-child(n+2), p:nth-last-child(n+2) ~ p{
     background: ;
 }
-#fullscreen:-webkit-full-screen {
-  padding: 42px;
-  background-color: pink;
-  border:2px solid #f00;
-  font-size: 200%;
-}
-#fullscreen:-moz-full-screen {
-  padding: 42px;
-  background-color: pink;
-  border:2px solid #f00;
-  font-size: 200%;
-}
-#fullscreen:-ms-fullscreen {
-  padding: 42px;
-  background-color: pink;
-  border:2px solid #f00;
-  font-size: 200%;
-}
-#fullscreen:fullscreen {
-  padding: 42px;
-  background-color: pink;
-  border:2px solid #f00;
-  font-size: 200%;
-}
 
-#fullscreen:-webkit-full-screen > h1 {
-  color: red;
-}
-
-#fullscreen:-moz-full-screen > h1 {
-  color: red;
-}
-
-#fullscreen:-ms-fullscreen > h1 {
-  color: red;
-}
-
-#fullscreen:fullscreen > h1 {
-  color: red;
-}
-
-#fullscreen:-webkit-full-screen > p {
-  color: darkred;
-}
-
-#fullscreen:-moz-full-screen > p {
-  color: darkred;
-}
-
-#fullscreen:-ms-fullscreen > p {
-  color: darkred;
-}
-
-#fullscreen:fullscreen > p {
-  color: darkred;
-}
-
-#fullscreen:-webkit-full-screen > button {
-  display: none;
-}
-
-#fullscreen:-moz-full-screen > button {
-  display: none;
-}
-
-#fullscreen:-ms-fullscreen > button {
-  display: none;
-}
-
-#fullscreen:fullscreen > button {
-  display: none;
-}
+/*Este es un simple comentario*/
