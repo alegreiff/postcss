@@ -1,0 +1,3 @@
+$blue: blue;
+$column: 200px;
+@custom-media --small-viewport (max-width: 840px);

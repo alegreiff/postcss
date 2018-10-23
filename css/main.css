@@ -1,0 +1,93 @@
+@import 'vars.css';
+@alias {
+    fs: font-size;
+    bg: background;
+    fw: font-weight;
+  }
+html {
+    font-size: responsive 16px 26px;
+    font-range: 420px 1280px;
+  }
+:fullscreen a{
+    display: flex;
+}
+:root{
+    --foca: lime;
+    --foca2: rgba(144, 100, 182, 0.6);
+}
+body{
+    /*bg: hwb(200, 10% 50% 1);*/
+
+
+    font-family: 'Lato', sans-serif;
+    bg: var(--foca);
+    display: grid;
+    grid-template-columns: 350px 1fr 1fr;
+    grid-template-areas:    "coda header header"
+                            "contenido contenido aside"
+                            "footer footer footer";
+    grid-template-rows: 150px 1fr 80px;
+    @media (--small-viewport){
+      grid-template-columns: 1fr;
+      grid-template-areas:    "header"
+                              "contenido"
+                              "aside"
+                              "footer"
+                              "coda";
+
+    }
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    & .jaja{
+        background: purple;
+    }
+
+}
+p.coda{
+  grid-area: coda;
+}
+body:fullscreen{
+    bg: black;
+    font-size: 3em;
+}
+header{
+    grid-area: header;
+    bg: rgba(150, 100, 200, 0.8);
+
+}
+aside{
+    grid-area: aside;
+    /*bg: var(--foca2);*/
+    bg: hwb(333, 33%, 3%, 0.33);
+}
+.contenido{
+    grid-area: contenido;
+    bg: crimson;
+}
+footer{
+    grid-area: footer;
+    bg: lime;
+    color: rgba(180, 100, 20, 0.8);
+}
+p:at-least(2){
+    bg: ;
+}
+#fullscreen:fullscreen {
+  padding: 42px;
+  background-color: pink;
+  border:2px solid #f00;
+  font-size: 200%;
+}
+
+#fullscreen:fullscreen > h1 {
+  color: red;
+}
+
+#fullscreen:fullscreen > p {
+  color: darkred;
+}
+
+#fullscreen:fullscreen > button {
+  display: none;
+}
